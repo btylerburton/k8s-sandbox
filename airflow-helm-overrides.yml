@@ -1,0 +1,5 @@
+env:
+  - name: "AIRFLOW__WEBSERVER__EXPOSE_CONFIG"
+    value: "true"
+  - name: "AIRFLOW__CORE__DAGS_FOLDER"
+    value: "/opt/airflow/dags"
