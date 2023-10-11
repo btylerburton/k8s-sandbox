@@ -61,3 +61,6 @@ terraform/*/provision/.cache
 terraform/ecs/provision/app.py
 terraform/ecs/provision/package/
 restart_app.zip
+
+# Airflow logs symlink
+logs/*

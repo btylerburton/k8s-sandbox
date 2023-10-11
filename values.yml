@@ -1,7 +1,4 @@
-hostPath:
-  dags: "./dags"
-  logs: "./logs"
-
+# Airflow chart config
 airflow:
   executor: KubernetesExecutor
   dags:
@@ -16,3 +13,13 @@ airflow:
       storageClassName: local-storage    
   redis:
     enabled: false
+
+# Env variables to pass into every container running Airflow
+env:
+  - name: "AIRFLOW__WEBSERVER__EXPOSE_CONFIG"
+    value: "true"
+
+# Host path for local volumes
+hostPath:
+  dags: /Users/brendantburton/Repos/-me/k8s-sandbox/dags
+  logs: /Users/brendantburton/Repos/-me/k8s-sandbox/logs
